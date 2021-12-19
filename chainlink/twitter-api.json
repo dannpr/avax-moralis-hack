@@ -1,26 +1,28 @@
 {
-  "name": "twitter-api",
-  "initiators": [
-      {
-          "type": "runlog",
-          "params": {
-              "address": "0xbC8888Ed3ECaE35bb932D11E17Aca55094b67e0C"
-          }
-      }
-  ],
-  "tasks": [
-      {
-          "type": "twitter-api",
-          "params": {
-              "tweet": "1469504391057137664",
-              "params": {}
-          }
-      },
-      {
-          "type": "ethbytes32"
-      },
-      {
-          "type": "ethtx"
-      }
-  ]
+    "name": "twitter-api",
+    "initiators": [
+        {
+            "type": "runlog",
+            "params": {
+                "address": "0xbC8888Ed3ECaE35bb932D11E17Aca55094b67e0C"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "type": "twitter-api",
+            "params": {
+                "tweet": "1469504391057137664",
+                "username": "patriciobcs",
+                "address": "0x5566DC400645F12517e22cE4f962901A20efBeD9",
+                "params": {}
+            }
+        },
+        {
+            "type": "ethbool"
+        },
+        {
+            "type": "ethtx"
+        }
+    ]
 }

@@ -7,7 +7,9 @@ const customError = (data) => {
 }
 
 const customParams = {
-  tweetID: ['tweet']
+  tweetID: ['tweet'],
+  username: ['username'],
+  address: ['address'],
 }
 
 const createRequest = (input, callback) => {
@@ -15,6 +17,8 @@ const createRequest = (input, callback) => {
   const jobRunID = validator.validated.id;
   const endpoint = 'tweets';
   const tweetID = validator.validated.data.tweetID;
+  const username = validator.validated.data.username;
+  const address = validator.validated.data.address;
   const baseURL = `https://api.twitter.com/2/`;
   const url = `${endpoint}/${tweetID}`;
   const params = {
@@ -33,8 +37,10 @@ const createRequest = (input, callback) => {
 
   Requester.request(config, customError)
     .then(response => {
-      console.log(response);
-      response.data.result = response.data.includes.users[0].username + response.data.data.text;
+      response.data.result = 
+        response.data.data.text == address &&
+        response.data.includes.users[0].username == username;
+      
       callback(response.status, Requester.success(jobRunID, response))
     })
     .catch(error => {
