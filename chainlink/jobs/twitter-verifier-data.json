@@ -1,0 +1,51 @@
+{
+    "name": "twitter-verifier",
+    "initiators": [
+        {
+            "type": "runlog",
+            "params": {
+                "address": "0xbC8888Ed3ECaE35bb932D11E17Aca55094b67e0C"
+            }
+        }
+    ],
+    "tasks": [
+        {
+            "type": "twitter-verifier",
+            "params": {
+                "tweet": "1469504391057137664",
+                "query": "username",
+                "params": {}
+            }
+        },
+        {
+            "type": "ethbytes32"
+        },
+        {
+            "type": "resultcollect"
+        },
+        {
+            "type": "twitter-verifier",
+            "params": {
+                "tweet": "1469504391057137664",
+                "query": "text",
+                "params": {}
+            }
+        },
+        {
+            "type": "ethbytes32"
+        },
+        {
+            "type": "resultcollect"
+        },
+        {
+            "type": "ethtx",
+            "confirmations": 1,
+            "params": {
+              "abiEncoding": [
+                "bytes32",
+                "bytes32"
+              ]
+            }
+        }
+    ]
+}

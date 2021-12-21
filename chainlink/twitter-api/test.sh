@@ -1,1 +1,0 @@
-curl -X POST -H "content-type:application/json" "http://localhost:8081/" --data '{ "id": 0, "data": { "tweet": "1469504391057137664", "username": "patriciobcs", "address": "0x5566DC400645F12517e22cE4f962901A20efBeD9" } }'

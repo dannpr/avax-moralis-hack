@@ -1,5 +1,5 @@
 {
-    "name": "twitter-api",
+    "name": "twitter-verifier",
     "initiators": [
         {
             "type": "runlog",
@@ -10,7 +10,7 @@
     ],
     "tasks": [
         {
-            "type": "twitter-api",
+            "type": "twitter-verifier",
             "params": {
                 "tweet": "1469504391057137664",
                 "username": "patriciobcs",

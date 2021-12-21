@@ -15,5 +15,5 @@ echo "U2EWSifVqfDBiAynNJW86LAQzAt8ENUK" > ~/.chainlink-avalanche/.password
 docker network create chainlink
 docker run --name pgchainlink --network chainlink -e POSTGRES_PASSWORD=chainlink -e POSTGRES_USER=chainlink -d -p 5432:5432 -v /root/postgres-data/:/var/lib/postgresql/data postgres
 docker run -d --name chainlink-avalanche-node --network chainlink -p 6688:6688 -v ~/.chainlink-avalanche:/chainlink -it --env-file=chainlink/.env smartcontract/chainlink:0.10.3 local n -p /chainlink/.password -a /chainlink/.api
-docker build ./chainlink/twitter-api/ -t external-adapter
-docker run --name twitter-api --network chainlink -p 8081:8081 -it external-adapter:latest
+docker build ./chainlink/external-adaptors/twitter-verifier/ -t twitter-verifier
+docker run --name twitter-verifier --network chainlink -p 8081:8081 -it twitter-verifier:latest
