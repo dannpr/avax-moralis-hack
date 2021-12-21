@@ -30,7 +30,7 @@ class App extends Component {
         <div className='pt-72 text-2xl font-inter'>
           {this.state.account !== '' ?
             <div className='flex justify-center items-center'>
-              <a className="twitter-share-button bg-blue-400 p-4 rounded-md" href={`https://twitter.com/intent/tweet?text=${("Verifying my ETH address: " + this.state.account).replace(' ', '%20')}`}>
+              <a className="twitter-share-button bg-blue-400 p-4 rounded-md" href={`https://twitter.com/intent/tweet?text=${this.state.account}`}>
                 Verify your address: {this.state.account.substring(0, 4) + '...' + this.state.account.substring(this.state.account.length-4, this.state.account.length)}
               </a>
             </div>
