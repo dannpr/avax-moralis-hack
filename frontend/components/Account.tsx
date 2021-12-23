@@ -72,7 +72,7 @@ const Account = ({ triedToEagerConnect }: AccountProps) => {
   return (
     <a
       {...{
-        //href:`https://twitter.com/intent/tweet?text=${account}`,//ne s'affiche pas quand j'enleve les coms
+        href:`https://twitter.com/intent/tweet`,//ne s'affiche pas quand j'enleve les coms
         target: "_blank",
         rel: "noopener noreferrer",
       }}

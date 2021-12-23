@@ -5,6 +5,7 @@ import Account from "../components/Account";
 import ETHBalance from "../components/ETHBalance";
 import TokenBalance from "../components/TokenBalance";
 import useEagerConnect from "../hooks/useEagerConnect";
+import Form from "../components/Form"
 
 const DAI_TOKEN_ADDRESS = "0x6b175474e89094c44da98b954eedeac495271d0f";
 
@@ -45,6 +46,7 @@ function Home() {
             <ETHBalance />
 
             <TokenBalance tokenAddress={DAI_TOKEN_ADDRESS} symbol="DAI" />
+            <Form />
           </section>
         )}
       </main>
