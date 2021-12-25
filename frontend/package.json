@@ -1,5 +1,5 @@
 {
-  "name": "next-web3-boilerplate",
+  "name": "avax-moralis-hack",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -30,9 +30,12 @@
   "devDependencies": {
     "@typechain/ethers-v5": "^8.0.5",
     "@types/react": "^17.0.37",
+    "autoprefixer": "^10.4.0",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.7",
     "ethers": "^5.5.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.7",
     "typechain": "^6.0.5",
     "typescript": "^4.5.4"
   }

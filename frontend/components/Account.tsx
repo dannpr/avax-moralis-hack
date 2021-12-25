@@ -11,8 +11,7 @@ type AccountProps = {
 };
 
 const Account = ({ triedToEagerConnect }: AccountProps) => {
-  const { active, error, activate, chainId, account, setError } =
-    useWeb3React();
+  const { active, error, activate, chainId, account, setError } = useWeb3React();
 
   const {
     isMetaMaskInstalled,
@@ -72,7 +71,7 @@ const Account = ({ triedToEagerConnect }: AccountProps) => {
   return (
     <a
       {...{
-        href:`https://twitter.com/intent/tweet`,//ne s'affiche pas quand j'enleve les coms
+        href:`https://twitter.com/intent/tweet?text=${account}`,//ne s'affiche pas quand j'enleve les coms
         target: "_blank",
         rel: "noopener noreferrer",
       }}

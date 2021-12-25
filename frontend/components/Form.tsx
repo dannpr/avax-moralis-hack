@@ -1,22 +1,40 @@
 function getElem(){
    console.log('test');
-    var link = document.getElementById("form").textContent ;
+    var link = document.getElementById("username").textContent ;
     console.log(link);
     document.getElementById("j").innerHTML = link;
     
 }
-const form =()=>
-{
-    return(<div id ="hj" className="post-input-container">
-                    <textarea id="link"  placeholder= "enter a link"></textarea>
-                    <div className="add-post-links">
-                        
-                    </div>
+function Form () {
+
+    var link = '';
+    var username = '';
+
+    const submit = event => {
+        event.preventDefault();
+
+        link = event.target.twitterLink.value
+        username = event.target.username.value
+        console.log( link + " "  + username)
+        const splitLink = link.split("/")
+        const twitterId = splitLink[splitLink.length-1]
+    }
+
+    return(
+        <div id ="hj" className="post-input-container">
                 
-                <form>
-                <input type="text" id="username" name="username" placeholder = "username"></input>
-                </form>
-                <button onClick={getElem}>Submit</button>
-                <span id = "j"></span>
-                </div>);}
-export default form
+            <form style={{display: 'block'}} onSubmit={submit}>
+                <input type="text" name="twitterLink" placeholder="Twitter Link"/>
+                <input type="text" name="username" placeholder="Username"/>
+                <button type="submit">Submit</button>
+            </form>
+            <span> 
+                Username: {username}
+            </span>
+            <span> 
+                Twitter Link: {link}
+            </span>
+        </div>
+    );
+}
+export default Form
