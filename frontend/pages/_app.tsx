@@ -8,8 +8,10 @@ import { MoralisProvider } from "react-moralis";
 
 
 function NextWeb3App({ Component, pageProps }: AppProps) {
+  const apikey='Y2LtZ2IgOkjtBxlHK6HP7PxPqoaAmaxLzxsSsDD2';
+  const url = 'https://aen838gbrwsp.usemoralis.com:2053/server';
   return (
-    <MoralisProvider appId={process.env.MORALIS_APPLICATION_ID } serverUrl={process.env.MORALIS_SERVER_ID}>
+    <MoralisProvider appId={apikey} serverUrl={url}>
     <Web3ReactProvider getLibrary={getLibrary}>
       <Component {...pageProps} />
     </Web3ReactProvider>
