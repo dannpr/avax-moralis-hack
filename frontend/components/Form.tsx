@@ -1,5 +1,6 @@
 import { useWeb3React } from "@web3-react/core";
 import { useMoralis } from "react-moralis";
+import ABI from '../contracts/twitter-verifier.json'
 
 function Form () {
 
@@ -7,11 +8,14 @@ function Form () {
 
     const { account } = useWeb3React();
 
-    const callContractMethod = async () => {
-        
+    const callContractMethod = async (tweetId, username) => {
+
         const web3 = await (Moralis as any).enableWeb3()
-        // const contract = new web3.eth.Contract(, '0x3C1Ab97CF4f2099A7e4926caA7011777d6b6961C')
-        console.log(web3)
+        
+        const contract = new web3.eth.Contract(ABI, '0x3C1Ab97CF4f2099A7e4926caA7011777d6b6961C')
+        console.log(contract.methods)
+        const requestValidation = await contract.methods.requestValidation(tweetId, username).call()
+        console.log(requestValidation)
     }
 
     const submit = event => {
@@ -20,8 +24,7 @@ function Form () {
         const username = event.target.username.value
         const splitLink = event.target.twitterLink.value.split("/")
         const twitterId = splitLink[splitLink.length-1]
-        console.log(username + ' ' + twitterId)
-        callContractMethod()
+        callContractMethod(twitterId, username)
     }
 
     return(
