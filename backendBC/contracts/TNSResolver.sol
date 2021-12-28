@@ -8,13 +8,12 @@ import "./TNS.sol";
 /**
  * @dev Provides a default implementation of a resolver for reverse records,
  * which permits only the owner to update it.
+ * translate name into address
  */
 contract TNSResolver {
     TNS tns;
 
     mapping(bytes32 => address) addresses;
-
-    /*     constructor() public {}*/
 
     function addr(bytes32 node) public view returns (address) {
         return addresses[node];
