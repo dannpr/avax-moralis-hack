@@ -1,6 +1,12 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity >=0.8.4;
 /**
+ * permit to find directly what we search in the tns
+ * Resolvers are responsible for performing resource lookups for a name - for instance, returning a contract address, a content hash, or IP address(es) as appropriate.
+ * The resolver specification, defined here and extended in other ENSIPs, defines what methods a resolver may implement to support resolving different types of records.
+ */
+
+/**
  * translate name into address
  * **/
 import "./TNS.sol";
