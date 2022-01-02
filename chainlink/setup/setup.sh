@@ -7,6 +7,7 @@ CHAINLINK_TLS_PORT=0
 SECURE_COOKIES=false
 GAS_UPDATER_ENABLED=true
 ALLOW_ORIGINS=*
+MINIMUM_CONTRACT_PAYMENT=100000000000000
 ETH_URL=$MORALIS_AVALANCHE_SPEEDY_NODE_ENDPOINT_WS
 DATABASE_URL=postgresql://chainlink:chainlink@pgchainlink:5432/chainlink?sslmode=disable" > chainlink/.env
 echo "test@test.com
