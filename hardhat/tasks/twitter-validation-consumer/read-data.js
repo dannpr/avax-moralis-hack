@@ -1,4 +1,4 @@
-task("read-data", "Calls an TwitterValidationConsumer Contract to read data obtained from an external API")
+task("read-data", "Calls an TwitterValidationConsumer Contract to read data obtained from an external adapter")
     .addParam("contract", "The address of the TwitterValidationConsumer contract that you want to call")
     .setAction(async taskArgs => {
         const contractAddr = taskArgs.contract
@@ -15,7 +15,6 @@ task("read-data", "Calls an TwitterValidationConsumer Contract to read data obta
         
         let result = await twitterValidationConsumer.getAddress('patriciobcs')
         console.log('Address is: ', result)
-
 
         if (result == undefined && ['hardhat', 'localhost', 'ganache'].indexOf(network.name) == 0) {
             console.log("You'll either need to wait another minute, or fix something!")

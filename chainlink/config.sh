@@ -1,0 +1,15 @@
+echo "ROOT=/chainlink
+LOG_LEVEL=debug
+ETH_CHAIN_ID=43113
+MIN_OUTGOING_CONFIRMATIONS=2
+LINK_CONTRACT_ADDRESS=0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846
+CHAINLINK_TLS_PORT=0
+SECURE_COOKIES=false
+GAS_UPDATER_ENABLED=true
+ALLOW_ORIGINS=*
+MINIMUM_CONTRACT_PAYMENT=100000000000000
+ETH_URL=<MORALIS_AVALANCHE_SPEEDY_NODE_ENDPOINT_WS>
+DATABASE_URL=postgresql://chainlink:chainlink@pgchainlink:5432/chainlink?sslmode=disable" > chainlink/.env
+echo "test@test.com
+U2EWSifVqfDBiAynNJW86LAQzAt8ENUK" > ~/.chainlink-avalanche/.api
+echo "U2EWSifVqfDBiAynNJW86LAQzAt8ENUK" > ~/.chainlink-avalanche/.password
