@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
-// smart contract that maintains domains , store : the owner and the resolver
+
 /**
- * the owner of a domains is either a smart contrac or a user
- * the owner of domain regitry 1) set the resolver
+ * smart contract that maintains domains , store : the owner and the resolver
+ * the owner of a domains is either a smart contrac or a user - a owner can transfer ownership set a resolver
+ * the resolver : contract that maps from  to ressource , resolver or in the resolver field of registry
  *
  **/
 pragma solidity >=0.8.4;
@@ -36,7 +37,7 @@ contract TNSRegistry is TNS {
         bytes32 node,
         address _owner,
         address _resolver
-    ) external virtual {
+    ) external virtual override {
         setOwner(node, _owner);
         _setResolver(node, _resolver);
     }
