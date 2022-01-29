@@ -64,6 +64,7 @@ async function setupReverseRegistrar(ens, registrar, reverseRegistrar, accounts)
   await ens.setSubnodeOwner(namehash.hash("reverse"), labelhash("addr"), reverseRegistrar.address);
 }
 
+
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main()
