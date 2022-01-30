@@ -1,0 +1,13 @@
+.post-input-container{
+    padding-left:55px;
+    padding-top: 20px;
+    
+}
+.post-input-container textarea{
+    width: 50%;
+    border:0;
+    outline:0;
+    border: 1px solid #ccc;
+    background:transparent;
+    resize:none;
+}
